@@ -1,5 +1,5 @@
 const Discord = require('discord.js');
-const Tableau = require('./commandes/Tableau')
+const Tableau = require('./Tableau')
 const bot = new Discord.Client();
 
 
