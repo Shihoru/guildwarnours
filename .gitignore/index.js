@@ -20,5 +20,11 @@ if(message.content == "Salut"){
 	message.reply("Hello :raised_hands:");
 	console.log("Le bot dit bonjour");
 }
+	
+if(message.content == "J'ai réussi !"){
+	message.reply("C'est génial !! :raised_hands:");
+	console.log("Le bot a félicité son créateur");
+}
+}
 });
 
