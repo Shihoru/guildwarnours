@@ -20,7 +20,6 @@ if(message.content == "Salut"){
 	message.reply("Hello :raised_hands:");
 	console.log("Le bot dit bonjour");
 }
-	
-}
+
 });
 
