@@ -1,0 +1,14 @@
+module.exports = class Tableau {
+
+    static match (message){
+        return message.content.startsWith('!gvg')
+    }
+
+    static action (message) {
+        let args = message.content.split(' ')
+        args.shift()
+        for (var i = 1; i<=args; i++) {
+            message.channel.send("___***"+i+"***___ :star: :star: :star:"); 
+        }
+    }
+}
