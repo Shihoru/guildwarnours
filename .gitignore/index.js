@@ -22,23 +22,23 @@ if(message.content == "Salut"){
 }
 
 if(message.content.endsWith(":star:") ){
-	message.react('1️⃣').then(() => message.react('2️⃣')).then(() => message.react('3️⃣'));
+	message.react('🥇').then(() => message.react('🥈')).then(() => message.react('🥉'));
         
                  const filter = (reaction, user) => {
-                     return ['1️⃣', '2️⃣','3️⃣'].includes(reaction.emoji.name) && user.id === message.author.id;
+                     return ['🥇', '🥈','🥉'].includes(reaction.emoji.name) && user.id === message.author.id;
                  };
             
                  message.awaitReactions(filter, { max: 1}).then(collected => {
                     const reaction = collected.first();
         
-                    if (reaction.emoji.name === '1️⃣') {
-                          message.reply('you reacted with 1️⃣.');
+                    if (reaction.emoji.name === '🥇') {
+                          message.reply('you reacted with 🥇.');
 					} 
-					if (reaction.emoji.name === '2️⃣'){
-                          message.reply('you reacted with 2️⃣.');
+					if (reaction.emoji.name === '🥈'){
+                          message.reply('you reacted with 🥈.');
 					} 
-					if (reaction.emoji.name === '3️⃣'){
-                            message.reply('you reacted with 3️⃣.');
+					if (reaction.emoji.name === '🥉'){
+                            message.reply('you reacted with 🥉.');
                     }
                  });
 }
