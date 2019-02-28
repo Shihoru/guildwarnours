@@ -30,17 +30,4 @@ if(message.content.endsWith(":star:") ){
             
 }
 	
-	message.awaitReactions(filter, { max: 1}).then(collected => {
-                    const reaction = collected.first();
-        
-                    if (reaction.emoji.name === '🥇') {
-                          message.reply('you reacted with 🥇.');
-					} 
-					if (reaction.emoji.name === '🥈'){
-                          message.reply('you reacted with 🥈.');
-					} 
-					if (reaction.emoji.name === '🥉'){
-                            message.reply('you reacted with 🥉.');
-                    }
-                 });
 });
