@@ -24,7 +24,7 @@ if(message.content == "Salut"){
 });
 
 
-bot.on('message',(reaction,user) => {
-	if(reaction.emoji.name === ":one:")
-		 bot.channels.get("549713458866814986").send(':tada:')
+bot.on('messageReactionAdd', (reaction, user) => {
+if(reaction.emoji.name === ":one:")
+    bot.channels.get("549713458866814986").send('Tu as réagi avec ' + reaction.emoji.name + ' !');
 });
