@@ -20,11 +20,14 @@ if(message.content == "Salut"){
 	message.reply("Hello :raised_hands:");
 	console.log("Le bot dit bonjour");
 }
-
+	
+if (message.content === '!fruits') {
+	message.react('🍎');
+	message.react('🍊');
+	message.react('🍇');
+}
+	
 });
 
 
-bot.on('messageReactionAdd', (reaction, user) => {
-if(reaction.emoji.name === ":tada:")
-    bot.channels.get("549713458866814986").send('Tu as réagi avec ' + reaction.emoji.name + ' !');
-});
+
