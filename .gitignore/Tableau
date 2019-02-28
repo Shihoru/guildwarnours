@@ -1,3 +1,4 @@
+
 module.exports = class Tableau {
 
     static match (message){
@@ -9,6 +10,26 @@ module.exports = class Tableau {
         args.shift()
         for (var i = 1; i<=args; i++) {
             message.channel.send("___***"+i+"***___ :star: :star: :star:"); 
+  
+                 message.react('🍎').then(() => message.react('🍊')).then(() => message.react('🍇'));
+        
+                 const filter = (reaction, user) => {
+                     return ['🍎', '🍊','🍇'].includes(reaction.emoji.name) && user.id === message.author.id;
+                 };
+            
+                 message.awaitReactions(filter, { max: 1})
+                    .then(collected => {
+                    const reaction = collected.first();
+        
+                    if (reaction.emoji.name === '🍎') {
+                          message.reply('you reacted with an apple.');
+                        } else if (reaction.emoji.name === '🍊'){
+                          message.reply('you reacted with an orange.');
+                        } else{
+                            message.reply('you reacted with a grap.');
+                        }
+                 });
+
         }
-    }
+     }
 }
