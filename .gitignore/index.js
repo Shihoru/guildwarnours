@@ -25,6 +25,6 @@ if(message.content == "Salut"){
 
 
 bot.on('message',(reaction,user) => {
-	if(reaction.emoji.name === ":un:")
+	if(reaction.emoji.name === ":one:")
 		 bot.channels.get(startsWith("550456")).send(':tada:')
 });
