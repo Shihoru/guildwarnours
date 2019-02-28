@@ -25,6 +25,6 @@ if(message.content == "Salut"){
 
 
 bot.on('messageReactionAdd', (reaction, user) => {
-if(reaction.emoji.name === ":one:")
+if(reaction.emoji.name === ":tada:")
     bot.channels.get("549713458866814986").send('Tu as réagi avec ' + reaction.emoji.name + ' !');
 });
