@@ -28,7 +28,9 @@ if(message.content.endsWith(":star:") ){
                      return ['🥇', '🥈','🥉'].includes(reaction.emoji.name) && user.id === message.author.id;
                  };
             
-                 message.awaitReactions(filter, { max: 1}).then(collected => {
+}
+	
+	message.awaitReactions(filter, { max: 1}).then(collected => {
                     const reaction = collected.first();
         
                     if (reaction.emoji.name === '🥇') {
@@ -41,5 +43,4 @@ if(message.content.endsWith(":star:") ){
                             message.reply('you reacted with 🥉.');
                     }
                  });
-}
 });
