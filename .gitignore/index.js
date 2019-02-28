@@ -21,10 +21,8 @@ if(message.content == "Salut"){
 	console.log("Le bot dit bonjour");
 }
 	
-if (message.content === '!fruits') {
-	message.react('🍎');
-	message.react('🍊');
-	message.react('🍇');
+if (message.react === ':tada:') {
+	message.reply("Tu as réagis à ce message !!");
 }
 	
 });
