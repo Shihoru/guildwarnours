@@ -21,7 +21,7 @@ if(message.content == "Salut"){
 	console.log("Le bot dit bonjour");
 }
 
-if(message.content.endsWith == ":star:"){
+if(message.content.endsWith(":star:") ){
 	message.react('🍎').then(() => message.react('🍊')).then(() => message.react('🍇'));
         
                  const filter = (reaction, user) => {
