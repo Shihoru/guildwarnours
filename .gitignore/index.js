@@ -1,5 +1,5 @@
 const Discord = require('discord.js');
-const Tableau = require('./Tableau')
+const Tableau = require('./commandes/Tableau')
 const bot = new Discord.Client();
 
 
@@ -20,12 +20,26 @@ if(message.content == "Salut"){
 	message.reply("Hello :raised_hands:");
 	console.log("Le bot dit bonjour");
 }
-	
-if (message.react === '🍎') {
-	message.reply("Tu as réagis à ce message !!");
+
+if(message.content.endsWith == ":star:"){
+	message.react('🍎').then(() => message.react('🍊')).then(() => message.react('🍇'));
+        
+                 const filter = (reaction, user) => {
+                     return ['🍎', '🍊','🍇'].includes(reaction.emoji.name) && user.id === message.author.id;
+                 };
+            
+                 message.awaitReactions(filter, { max: 1}).then(collected => {
+                    const reaction = collected;
+        
+                    if (reaction.emoji.name === '🍎') {
+                          message.reply('you reacted with an apple.');
+					} 
+					if (reaction.emoji.name === '🍊'){
+                          message.reply('you reacted with an orange.');
+					} 
+					if (reaction.emoji.name === '🍇'){
+                            message.reply('you reacted with a grap.');
+                    }
+                 });
 }
-	
 });
-
-
-
