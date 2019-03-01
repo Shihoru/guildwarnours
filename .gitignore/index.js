@@ -29,7 +29,7 @@ if(message.content.endsWith(":star:") ){
                  };
 	
 	
-	message.awaitReactions.then(collected => {
+	message.awaitReactions().then(collected => {
 		const reaction = collected.first();
 
 		if (reaction.emoji.name === '🥇') {
