@@ -21,29 +21,6 @@ if(message.content == "Salut"){
 	console.log("Le bot dit bonjour");
 }
 
-if(message.content.endsWith(":star:") ){
-	message.react('🥇').then(() => message.react('🥈')).then(() => message.react('🥉'));
-        
-                 const filter = (reaction, user) => {
-                     return ['🥇', '🥈','🥉'].includes(reaction.emoji.name) && user.id === message.author.id;
-                 };
-	
-	
-	message.awaitReactions(filter, { max: 2, time: 60000, errors: ['time'] })
-		.then(collected => {
-			const reaction = collected.first();
-
-			if ((reaction.emoji.name === '🥇') && (user.id !== bot.id)) {
-				message.edit("\b \b \b \b \b \b \b");
-			} 
-		})
-		.catch(collected => {
-			message.reply('you didn\'t react');
-            
-		})
-
-}
-
 });
 	
 	
