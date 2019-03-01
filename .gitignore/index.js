@@ -29,11 +29,10 @@ if(message.content.endsWith(":star:") ){
                  };
 	
 	
-	message.awaitReactions(filter, { max: 1, time: 60000, errors: ['time'] })
-	.then(collected => {
+	message.awaitReactions.then(collected => {
 		const reaction = collected.first();
 
-		if (reaction.emoji.name === '🥇' && user.id !== bot.user.id) {
+		if (reaction.emoji.name === '🥇') {
 			message.edit(String.prototype.length-8);
 		}
 	})
