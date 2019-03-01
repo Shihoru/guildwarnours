@@ -30,9 +30,9 @@ if(message.content.endsWith(":star:")){
 
 }
 	
-//if (message.react('🥇')) {
-//	message.edit("Je t'emmerde");
+if (message.react('🥇') && message.react('🥈') && message.react('🥉')) {
+	message.edit("Adversaire out");
 
-//}
+}
 
 });
