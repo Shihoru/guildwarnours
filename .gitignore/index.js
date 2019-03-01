@@ -27,11 +27,16 @@ if(message.content.endsWith(":star:") ){
                  const filter = (reaction, user) => {
                      return ['🥇', '🥈','🥉'].includes(reaction.emoji.name) && user.id === message.author.id;
                  };
-	// on vérifie que ce soit bien la bonne réaction et on ne compte pas celui du bot
-	if (reaction.emoji.name === '🥇' && reaction.emoji.name === '🥈' && reaction.emoji.name === '🥉' && user.id !== bot.user.id) {
-	// ici tu ajoute ce que ton bot doit faire quand il y a la bonne réaction
-		message.send("L'adversaire est vide");
-   	  }
+	
+	
+	message.awaitReactions(filter, { max: 1, time: 60000, errors: ['time'] })
+	.then(collected => {
+		const reaction = collected.first();
+
+		if (reaction.emoji.name === '🥇' && user.id !== bot.user.id) {
+			message.edit(String.prototype.length-8);
+		}
+	})
             
 }
 	
