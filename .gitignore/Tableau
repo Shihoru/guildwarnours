@@ -18,17 +18,5 @@ module.exports = class Tableau {
                  };
         }
         
-        message.awaitReactions(filter, { max: 2, time: 60000, errors: ['time'] })
-		.then(collected => {
-			const reaction = collected.first();
-
-			if ((reaction.emoji.name === '🥇') && (user.id !== bot.id)) {
-				message.edit("___***"+i+"***___ :star: :star:");
-			} 
-		})
-		.catch(collected => {
-			message.reply('you didn\'t react');
-            
-		})
      }
 }
