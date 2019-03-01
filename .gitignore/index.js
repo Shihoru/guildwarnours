@@ -23,10 +23,6 @@ if(message.content == "Salut"){
 
 if(message.content.endsWith(":star:")){
 	message.react('🥇').then(() => message.react('🥈')).then(() => message.react('🥉'));
-        
-                 const filter = (reaction, user) => {
-                     return ['🥇', '🥈','🥉'].includes(reaction.emoji.name) && user.id === message.author.id;
-                 };
 
 }
 	
