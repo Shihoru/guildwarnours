@@ -23,12 +23,14 @@ if(message.content == "Salut"){
 
 if(message.content.endsWith(":star:")){
 	message.react('🥇').then(() => message.react('🥈')).then(() => message.react('🥉'));
+	
+	if (message.react('🥇').count === 2 && message.react('🥈').count === 2 && message.react('🥉').count === 2) {
+	message.edit("Adversaire out");
+
+	}
 
 }
 	
-//if (message.react('🥇') && message.react('🥈') && message.react('🥉')) {
-//	message.edit("Adversaire out");
 
-//}
 
 });
