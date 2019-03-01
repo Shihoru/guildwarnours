@@ -21,7 +21,18 @@ if(message.content == "Salut"){
 	console.log("Le bot dit bonjour");
 }
 
-});
-	
-	
+if(message.content.endsWith(":star:") ){
+	message.react('🥇').then(() => message.react('🥈')).then(() => message.react('🥉'));
+        
+                 const filter = (reaction, user) => {
+                     return ['🥇', '🥈','🥉'].includes(reaction.emoji.name) && user.id === message.author.id;
+                 };
 
+}
+	
+if (message.react('🥇') && user.id !== bot.id) {
+	message.edit("Je t'emmerde");
+
+})
+
+});
