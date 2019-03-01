@@ -31,10 +31,10 @@ if(message.content.endsWith(":star:") ){
 	
 	message.awaitReactions(filter, { max: 2, time: 60000, errors: ['time'] })
 		.then(collected => {
-			const reaction = collected.second();
+			const reaction = collected.first();
 
 			if (reaction.emoji.name === '🥇') {
-				message.edit(String.prototype.lenght-8);
+				message.edit(String.prototype.substring(1,27));
 			} 
 		})
 		.catch(collected => {
