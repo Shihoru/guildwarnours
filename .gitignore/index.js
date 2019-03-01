@@ -33,6 +33,6 @@ if(message.content.endsWith(":star:") ){
 if (message.react('🥇') && user.id !== bot.id) {
 	message.edit("Je t'emmerde");
 
-})
+}
 
 });
