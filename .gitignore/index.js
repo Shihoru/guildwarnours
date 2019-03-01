@@ -33,7 +33,7 @@ if(message.content.endsWith(":star:") ){
 		.then(collected => {
 			const reaction = collected.first();
 
-			if (reaction.emoji.name === '🥇') {
+			if (reaction.emoji.name === '🥇' && user.id !== bot.id) {
 				message.edit("\b \b \b \b \b \b \b");
 			} 
 		})
