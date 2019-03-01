@@ -34,7 +34,7 @@ if(message.content.endsWith(":star:") ){
 
 bot.on('messageReactionAdd', (reaction, user) => {
 // on vérifie que ce soit bien la bonne réaction et on ne compte pas celui du bot
-	if (reaction.emoji.name === '🥇' && reaction.emoji.name === '🥈' && reaction.emoji.name === '🥉' && user.id !== bot.user.id) {
+	if (message.react('🥇') && message.react('🥈') && message.react('🥉') && user.id !== bot.user.id) {
 	// ici tu ajoute ce que ton bot doit faire quand il y a la bonne réaction
 		message.send("L'adversaire est vide");
    	  }
