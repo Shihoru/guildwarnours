@@ -24,7 +24,7 @@ if(message.content == "Salut"){
 if(message.content.endsWith(":star:")){
 	message.react('🥇').then(() => message.react('🥈')).then(() => message.react('🥉'));
 	
-	if ((message.react('🥇').compter === 2) && (message.react('🥈').compter === 2) && (message.react('🥉').compter === 2)) {
+	if (messageReaction.compter === 4) {
 	message.edit("Adversaire out");
 
 	}
