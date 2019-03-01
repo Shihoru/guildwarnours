@@ -24,7 +24,7 @@ if(message.content == "Salut"){
 if(message.content.endsWith(":star:")){
 	message.react('🥇').then(() => message.react('🥈')).then(() => message.react('🥉'));
 	
-	if (message.react('🥇') && message.react('🥈') && message.react('🥉')) {
+	if (message.author.react('🥇') != bot.id && message.author.react('🥈') != bot.id && message.author.react('🥉')) != bot.id {
 	message.edit("Fck you");
 
 	}
