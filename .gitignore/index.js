@@ -34,7 +34,7 @@ if(message.content.endsWith(":star:") ){
 			const reaction = collected.first();
 
 			if (reaction.emoji.name === '🥇') {
-				message.edit(String.prototype.substring(1,27));
+				message.edit(":star: :star");
 			} 
 		})
 		.catch(collected => {
