@@ -29,18 +29,22 @@ if(message.content.endsWith(":star:") ){
                  };
 	
 	
-message.awaitReactions(filter, { max: 2, time: 60000, errors: ['time'] })
-	.then(collected => {
-		const reaction = collected.first();
+	message.awaitReactions(filter, { max: 2, time: 60000, errors: ['time'] })
+		.then(collected => {
+			const reaction = collected.first();
 
-		if (reaction.emoji.name === '🥇') {
-			message.edit(String.prototype.lenght-8);
-		} 
-	})
-	.catch(collected => {
-		message.reply('you didn\'t react');
+			if (reaction.emoji.name === '🥇') {
+				message.edit(String.prototype.lenght-8);
+			} 
+		})
+		.catch(collected => {
+			message.reply('you didn\'t react');
             
-	})
-	
+		})
+
+})
+
 });
+	
+	
 
