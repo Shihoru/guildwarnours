@@ -30,7 +30,7 @@ if(message.content.endsWith(":star:") ){
 
 }
 	
-if (message.react('🥇') && user.id !== bot.id) {
+if (message.react('🥇')) {
 	message.edit("Je t'emmerde");
 
 }
