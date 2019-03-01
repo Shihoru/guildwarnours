@@ -42,7 +42,7 @@ if(message.content.endsWith(":star:") ){
             
 		})
 
-})
+}
 
 });
 	
