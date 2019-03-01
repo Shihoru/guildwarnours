@@ -30,9 +30,9 @@ if(message.content.endsWith(":star:") && message.author.id === bot.id){
 
 }
 	
-if (message.react('🥇')) {
-	message.edit("Je t'emmerde");
+//if (message.react('🥇')) {
+//	message.edit("Je t'emmerde");
 
-}
+//}
 
 });
