@@ -40,7 +40,7 @@ message.awaitReactions(filter, { max: 2, time: 60000, errors: ['time'] })
 	.catch(collected => {
 		message.reply('you didn\'t react');
             
-}
+	})
 	
 });
 
