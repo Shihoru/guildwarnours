@@ -11,11 +11,6 @@ module.exports = class Tableau {
         for (var i = 1; i<=args; i++) {
             message.channel.send("___***"+i+"***___ :star: :star: :star:"); 
             
-            message.react('🥇').then(() => message.react('🥈')).then(() => message.react('🥉'));
-        
-                 const filter = (reaction, user) => {
-                     return ['🥇', '🥈','🥉'].includes(reaction.emoji.name) && user.id === message.author.id;
-                 };
         }
         
      }
