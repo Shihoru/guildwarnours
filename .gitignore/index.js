@@ -48,7 +48,6 @@ if(message.content.endsWith(":star:")){
 	}
 	})
 	
-	message.awaitReactions(filter, {max : 1, time: 360000, errors: ['time']  })
 	.then(collected => {
 		const reaction = collected.first();
 
@@ -67,7 +66,6 @@ if(message.content.endsWith(":star:")){
 	}
 	})
 	
-	message.awaitReactions(filter, {max : 1, time: 360000, errors: ['time']  })
 	.then(collected => {
 		const reaction = collected.first();
 
