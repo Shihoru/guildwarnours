@@ -34,8 +34,8 @@ if(message.content.endsWith(":star:")){
 		const reaction = collected.last();
 
 	if (reaction.emoji.name ==='🥇') {
-		
-		message.edit(":star: :star:")
+		message.content == str;
+		message.edit(str.substr(0, 26));
 	}
 	})
 	.then(message.awaitReactions(filter, {max : 2, time: 360000, errors: ['time']  })
@@ -43,7 +43,8 @@ if(message.content.endsWith(":star:")){
 		const reaction = collected.last();
 	
 	if (reaction.emoji.name ==='🥈') {
-		message.edit(":star:")
+		message.content == str;
+		message.edit(str.substr(0, 20));
 	}
 	})
 	.then(message.awaitReactions(filter, {max : 3, time: 360000, errors: ['time']  })
