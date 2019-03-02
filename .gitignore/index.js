@@ -54,7 +54,7 @@ if(message.content.endsWith(":star:")){
 		message.edit(str + " :star:");
 	}
 
-}
+})
 	
 
 
