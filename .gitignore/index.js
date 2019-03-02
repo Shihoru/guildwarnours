@@ -22,11 +22,21 @@ if(message.content == "Salut"){
 }
 
 if(message.content.endsWith(":star:")){
+		
 	message.react('🥇').then(() => message.react('🥈')).then(() => message.react('🥉'));
 	
+	const filter = (reaction, user) => {
+	return ['🥇', '🥈','🥉'].includes(reaction.emoji.name) && user.id === message.author.id;
+	};
+	
+	message.awaitReactions(filter, { max: 1, time: 60000, errors: ['time'] })
+	.then(collected => {
+		const reaction = collected.first();
+
 	if ((message.react('🥇') === 2  && message.react('🥈') === 2 && message.react('🥉') === 2) ) {
 	message.edit("Fck you");
 
+	}
 	}
 
 }
