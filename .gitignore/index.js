@@ -38,45 +38,21 @@ if(message.content.endsWith(":star:")){
 		message.edit("hello")
 	}
 	
-	if (reaction.emoji.name ==='🥇' && reaction.emoji.name ==='🥈') {
-		message.edit("boom")
-	}
-		
-	if (reaction.emoji.name ==='🥇' && reaction.emoji.name ==='🥈' && reaction.emoji.name === '🥉') {
-		message.edit("dead");
-
-	}
 	})
 	
 	.then(collected => {
-		const reaction = collected.first();
+		const reaction = collected.second();
 
-	if (reaction.emoji.name ==='🥇') {
-		
-		message.edit("hello")
-	}
 	
 	if (reaction.emoji.name ==='🥇' && reaction.emoji.name ==='🥈') {
 		message.edit("boom")
 	}
 		
-	if (reaction.emoji.name ==='🥇' && reaction.emoji.name ==='🥈' && reaction.emoji.name === '🥉') {
-		message.edit("dead");
-
-	}
 	})
 	
 	.then(collected => {
-		const reaction = collected.first();
+		const reaction = collected.third();
 
-	if (reaction.emoji.name ==='🥇') {
-		
-		message.edit("hello")
-	}
-	
-	if (reaction.emoji.name ==='🥇' && reaction.emoji.name ==='🥈') {
-		message.edit("boom")
-	}
 		
 	if (reaction.emoji.name ==='🥇' && reaction.emoji.name ==='🥈' && reaction.emoji.name === '🥉') {
 		message.edit("dead");
