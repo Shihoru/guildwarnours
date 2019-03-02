@@ -24,7 +24,7 @@ if(message.content == "Salut"){
 if(message.content.endsWith(":star:")){
 	message.react('🥇').then(() => message.react('🥈')).then(() => message.react('🥉'));
 	
-	if ( message.author.reaction === "550432896100597790" && (message.react('🥇')  && message.react('🥈') && message.react('🥉')) ) {
+	if ((message.react('🥇') === 2  && message.react('🥈') === 2 && message.react('🥉') === 2) ) {
 	message.edit("Fck you");
 
 	}
