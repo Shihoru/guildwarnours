@@ -35,7 +35,7 @@ if(message.content.endsWith(":star:")){
 
 	if (reaction.emoji.name ==='🥇') {
 		var str = message.content;
-		message.edit(str.substr(0, 26));
+		message.edit(str.substr(0, 27));
 	}
 	})
 	.then(message.awaitReactions(filter, {max : 2, time: 360000, errors: ['time']  })
@@ -44,7 +44,7 @@ if(message.content.endsWith(":star:")){
 	
 	if (reaction.emoji.name ==='🥈') {
 		var str = message.content;
-		message.edit(str.substr(0, 21));
+		message.edit(str.substr(0, 20));
 	}
 	})
 	.then(message.awaitReactions(filter, {max : 3, time: 360000, errors: ['time']  })
