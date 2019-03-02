@@ -34,7 +34,7 @@ if(message.content.endsWith(":star:")){
 		const reaction = collected.last();
 
 	if (reaction.emoji.name ==='🥇') {
-		var str == message.content;
+		var str = message.content;
 		message.edit(str.substr(0, 26));
 	}
 	})
@@ -43,7 +43,7 @@ if(message.content.endsWith(":star:")){
 		const reaction = collected.last();
 	
 	if (reaction.emoji.name ==='🥈') {
-		var str == message.content;
+		var str = message.content;
 		message.edit(str.substr(0, 20));
 	}
 	})
