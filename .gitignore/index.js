@@ -35,7 +35,7 @@ if(message.content.endsWith(":star:")){
 
 	if (reaction.emoji.name ==='🥇') {
 		
-		message.edit(":start: :star:")
+		message.edit(":star: :star:")
 	}
 	})
 	.then(message.awaitReactions(filter, {max : 2, time: 360000, errors: ['time']  })
