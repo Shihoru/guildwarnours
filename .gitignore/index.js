@@ -55,7 +55,7 @@ if(message.content.endsWith(":star:")){
 	
     if (reaction.emoji.name ==='❌') {
         var str = message.content;
-        message.edit(str + str.substring(14, 20));
+        message.edit("GROSSE BITE");
     }
     })
 	  
@@ -87,7 +87,7 @@ if(message.content.endsWith(":star:")){
 
     if (reaction.emoji.name ==='❌') {
         var str = message.content;
-        message.edit(str + str.substring(14, 20));
+        message.edit("GROSSE BITE");
     }
     })
 	  
@@ -109,7 +109,7 @@ if(message.content.endsWith(":star:")){
 
     if (reaction.emoji.name ==='❌') {
         var str = message.content;
-        message.edit(str + str.substring(14, 20));
+        message.edit("GROSSE BITE");
     }
     })
 	  
@@ -119,7 +119,7 @@ if(message.content.endsWith(":star:")){
 
     if (reaction.emoji.name ==='❌') {
         var str = message.content;
-        message.edit(str + str.substring(14, 20));
+        message.edit("GROSSE BITE");
     }
     })))))))))
 	
