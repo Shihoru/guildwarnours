@@ -35,15 +35,15 @@ if(message.content.endsWith(":star:")){
 
 	if (reaction.emoji.name ==='🥇') {
 		
-		message.edit(String.prototype.slice(1, 27))
+		message.edit("hello")
 	}
 	
 	if (reaction.emoji.name ==='🥈') {
-		message.edit(String.prototype.slice(1, 20))
+		message.edit("boom")
 	}
 		
 	if (reaction.emoji.name === '🥉') {
-		message.edit(String.prototype.slice(1, 13));
+		message.edit("dead");
 
 	}
 	})
