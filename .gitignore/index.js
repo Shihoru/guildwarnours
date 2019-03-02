@@ -6,7 +6,7 @@ const bot = new Discord.Client();
 bot.login(process.env.TOKEN);
 
 bot.on('ready', function() {
-	bot.user.setActivity('Preparation du systeme gvg').catch(console.error)
+	bot.user.setActivity('Finalisastion du systeme gvg').catch(console.error)
 });
 
 
