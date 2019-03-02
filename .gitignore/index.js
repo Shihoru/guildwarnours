@@ -29,7 +29,7 @@ if(message.content.endsWith(":star:")){
 	return ['🥇', '🥈','🥉'].includes(reaction.emoji.name) && user.id !== message.author.id;
 	};
 	
-	message.awaitReactions(filter, {time: 360000, errors: ['time']  })
+	message.awaitReactions(filter, {max = 3, time: 360000, errors: ['time']  })
 	.then(collected => {
 		const reaction = collected.first();
 
