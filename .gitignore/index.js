@@ -37,24 +37,21 @@ if(message.content.endsWith(":star:")){
 		
 		message.edit("hello")
 	}
-	
 	})
-	
+	.then(message.awaitReactions(filter, {max : 1, time: 360000, errors: ['time']  })
 	.then(collected => {
-		const reaction = collected.second();
-
+		const reaction = collected.first();
 	
-	if (reaction.emoji.name ==='🥇' && reaction.emoji.name ==='🥈') {
+	if (reaction.emoji.name ==='🥈') {
 		message.edit("boom")
 	}
-		
 	})
-	
+	.then(message.awaitReactions(filter, {max : 1, time: 360000, errors: ['time']  })
 	.then(collected => {
-		const reaction = collected.third();
-
-		
-	if (reaction.emoji.name ==='🥇' && reaction.emoji.name ==='🥈' && reaction.emoji.name === '🥉') {
+		const reaction = collected.first();
+	
+				
+	if (reaction.emoji.name === '🥉') {
 		message.edit("dead");
 
 	}
