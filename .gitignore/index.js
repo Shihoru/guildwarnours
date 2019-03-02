@@ -26,7 +26,7 @@ if(message.content.endsWith(":star:")){
     message.react('🥇').then(() => message.react('🥈')).then(() => message.react('🥉')).then(() => message.react('❌'));
 
     const filter = (reaction, user) => {
-    return ['🥇', '🥈','🥉'].includes(reaction.emoji.name) && user.id !== message.author.id;
+    return ['🥇', '🥈','🥉','❌'].includes(reaction.emoji.name) && user.id !== message.author.id;
     };
 
     message.awaitReactions(filter, {max : 1, time: 360000, errors: ['time']  })
@@ -55,7 +55,7 @@ if(message.content.endsWith(":star:")){
 	
     if (reaction.emoji.name ==='❌') {
         var str = message.content;
-        message.edit("bite");
+        message.edit("GROSSE BITE");
     }
     })
 	  
