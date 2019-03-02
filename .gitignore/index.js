@@ -33,25 +33,28 @@ if(message.content.endsWith(":star:")){
 	.then(collected => {
 		const reaction = collected.last();
 
-	if (reaction.emoji.name ==='🥇') {
-		var str = message.content;
-		message.edit(str.substr(0, 28));
-	}
+		if (reaction.emoji.name ==='🥇') {
+			var str = message.content;
+			message.edit(str.substr(0, 28));
+		}
 	
-	if (reaction.emoji.name ==='🥈') {
-		var str = message.content;
-		message.edit(str.substr(0, 21));
-	}
+		if (reaction.emoji.name ==='🥈') {
+			var str = message.content;
+			message.edit(str.substr(0, 21));
+		}
 
-				
-	if (reaction.emoji.name === '🥉') {
-		message.edit("Adversaire vide");
-
-	}
+					
+		if (reaction.emoji.name === '🥉') {
+			message.edit("Adversaire vide");
+	
+		}
 		
-	if(reaction.emoji.name === '❌') {
-		var str = message.content;
-		message.edit(str + " :star:");
-	}
+		if(reaction.emoji.name === '❌') {
+			var str = message.content;
+			message.edit(str + " :star:");
+		}
 
-})
+	})
+}
+	
+});
