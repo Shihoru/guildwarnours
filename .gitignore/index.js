@@ -37,7 +37,7 @@ if(message.content.endsWith(":star:")){
 	message.edit("Fck you");
 
 	}
-	}
+	})
 
 }
 	
