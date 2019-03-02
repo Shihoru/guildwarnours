@@ -55,7 +55,7 @@ if(message.content.endsWith(":star:")){
 	
     if (reaction.emoji.name ==='❌') {
         var str = message.content;
-        message.edit(str + " :star:");
+        message.edit(str.substring(0, 28) + " :star:");
     }
     })
 	  
@@ -87,7 +87,7 @@ if(message.content.endsWith(":star:")){
 
     if (reaction.emoji.name ==='❌') {
         var str = message.content;
-        message.edit(str + " :star:");
+        message.edit(str.substring(0, 21) + " :star:");
     }
     })
 	  
@@ -109,7 +109,7 @@ if(message.content.endsWith(":star:")){
 
     if (reaction.emoji.name ==='❌') {
         var str = message.content;
-        message.edit(str + " :star:");
+        message.edit(str.substring(0, 14) + " :star:");
     }
     })
 	  
@@ -119,7 +119,7 @@ if(message.content.endsWith(":star:")){
 
     if (reaction.emoji.name ==='❌') {
         var str = message.content;
-        message.edit(str + " :star:");
+        message.edit(str.substring(0, 14) + " :star:");
     }
     })))))))))
 	
