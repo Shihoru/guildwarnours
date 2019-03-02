@@ -44,7 +44,7 @@ if(message.content.endsWith(":star:")){
 	
 	if (reaction.emoji.name ==='🥈') {
 		var str = message.content;
-		message.edit(str.substr(0, 20));
+		message.edit(str.substr(0, 21));
 	}
 	})
 	.then(message.awaitReactions(filter, {max : 3, time: 360000, errors: ['time']  })
