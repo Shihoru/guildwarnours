@@ -55,7 +55,7 @@ if(message.content.endsWith(":star:")){
 		message.edit("dead");
 
 	}
-	}))
+	})))
 
 }
 	
