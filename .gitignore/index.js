@@ -32,10 +32,10 @@ if(message.content.endsWith(":star:")){
     message.awaitReactions(filter, {max : 1, time: 360000, errors: ['time']  })
     .then(collected => {
         const reaction = collected.last();
-	const echec = " :star:";
+	    
     if (reaction.emoji.name ==='🥇') {
         var str = message.content;
-        message.edit(str.substr(0, 28));
+        message.edit(str.substring(0, 28));
     }
     })
 	
@@ -46,16 +46,16 @@ if(message.content.endsWith(":star:")){
 
     if (reaction.emoji.name ==='🥈') {
         var str = message.content;
-        message.edit(str.substr(0, 21));
+        message.edit(str.substring(0, 21));
     }
     })	  
     .then(message.awaitReactions(filter, {max : 2, time: 360000, errors: ['time']  })
     .then(collected => {
         const reaction = collected.last();
-	const echec = " :star:";
+	
     if (reaction.emoji.name ==='❌') {
         var str = message.content;
-        message.edit(str.concat(echec));
+        message.edit(str + str.substring(14, 20));
     }
     })
 	  
@@ -65,7 +65,7 @@ if(message.content.endsWith(":star:")){
 
     if (reaction.emoji.name ==='🥈') {
         var str = message.content;
-        message.edit(str.substr(0, 21));
+        message.edit(str.substring(0, 21));
     }
     })  
 	  
@@ -84,10 +84,10 @@ if(message.content.endsWith(":star:")){
     .then(message.awaitReactions(filter, {max : 3, time: 360000, errors: ['time']  })
     .then(collected => {
         const reaction = collected.last();
-	const echec = " :star:";
+
     if (reaction.emoji.name ==='❌') {
         var str = message.content;
-        message.edit(str.concat(echec));
+        message.edit(str + str.substring(14, 20));
     }
     })
 	  
@@ -106,20 +106,20 @@ if(message.content.endsWith(":star:")){
     .then(message.awaitReactions(filter, {max : 4, time: 360000, errors: ['time']  })
     .then(collected => {
         const reaction = collected.last();
-	const echec = " :star:";
+
     if (reaction.emoji.name ==='❌') {
         var str = message.content;
-        message.edit(str.concat(echec));
+        message.edit(str + str.substring(14, 20));
     }
     })
 	  
     .then(message.awaitReactions(filter, {max : 5, time: 360000, errors: ['time']  })
     .then(collected => {
         const reaction = collected.last();
-	const echec = " :star:";
+
     if (reaction.emoji.name ==='❌') {
         var str = message.content;
-        message.edit(str.concat(echec));
+        message.edit(str + str.substring(14, 20));
     }
     })))))))))
 	
