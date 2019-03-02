@@ -33,8 +33,17 @@ if(message.content.endsWith(":star:")){
 	.then(collected => {
 		const reaction = collected.first();
 
-	if ((message.react('🥇') === 2  && message.react('🥈') === 2 && message.react('🥉') === 2) ) {
-	message.edit("Fck you");
+	if (reaction.emoji.name ==='🥇') {
+		
+		message.edit(message.slice(1, 27))
+	}
+	
+	if (reaction.emoji.name ==='🥈') {
+		message.edit(message.slice(1, 20))
+	}
+		
+	if (reaction.emoji.name === '🥉') {
+		message.edit(message.slice(1, 13));
 
 	}
 	})
