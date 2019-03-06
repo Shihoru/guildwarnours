@@ -156,6 +156,19 @@ bot.on('message', function (message) {
             var str = message.content;
             message.edit(str.substring(0, 21));
         }
+		
+        })
+	      
+        .then(message.awaitReactions(filter, {max : 3, time: 360000, errors: ['time']  })
+        .then(collected => {
+    
+            const reaction = collected.last();
+    
+    
+        if (reaction.emoji.name === '🥉') {
+            message.edit("Adversaire vide");
+    
+        }
         }))))))))))))
         
     }
