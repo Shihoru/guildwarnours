@@ -159,7 +159,7 @@ bot.on('message', function (message) {
 		
         })
 	      
-        .then(message.awaitReactions(filter, {max : 3, time: 360000, errors: ['time']  })
+        .then(message.awaitReactions(filter, {max : 6, time: 360000, errors: ['time']  })
         .then(collected => {
     
             const reaction = collected.last();
