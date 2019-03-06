@@ -169,7 +169,7 @@ bot.on('message', function (message) {
             message.edit("Adversaire vide");
     
         }
-        }))))))))))))
+        })))))))))))))
         
     }
              
