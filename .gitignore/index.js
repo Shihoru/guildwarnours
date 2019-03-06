@@ -39,8 +39,17 @@ if(message.content.endsWith(":star:")){
     }
     })
 	
+     .then(message.awaitReactions(filter, {max : 2, time: 360000, errors: ['time']  })
+    .then(collected => {
+        const reaction = collected.last();
+	    
+    if (reaction.emoji.name ==='🥇') {
+        var str = message.content;
+        message.edit(str.substring(0, 28));
+    }
+    })
 	
-    .then(message.awaitReactions(filter, {max : 2, time: 360000, errors: ['time']  })
+     .then(message.awaitReactions(filter, {max : 2, time: 360000, errors: ['time']  })
     .then(collected => {
         const reaction = collected.last();
 
@@ -48,18 +57,42 @@ if(message.content.endsWith(":star:")){
         var str = message.content;
         message.edit(str.substring(0, 21));
     }
-    })	  
+    })  
+	  
     .then(message.awaitReactions(filter, {max : 2, time: 360000, errors: ['time']  })
     .then(collected => {
+
         const reaction = collected.last();
-	
-    if (reaction.emoji.name ==='❌') {
-        var str = message.content;
-        message.edit(str.substring(0, 28) + " :star:");
+
+
+    if (reaction.emoji.name === '🥉') {
+        message.edit("Adversaire vide");
+
     }
     })
 	  
-    .then(message.awaitReactions(filter, {max : 3, time: 360000, errors: ['time']  })
+    .then(message.awaitReactions(filter, {max : 2, time: 360000, errors: ['time']  })
+    .then(collected => {
+        const reaction = collected.last();
+
+    if (reaction.emoji.name ==='❌') {
+        var str = message.content;
+        message.edit(str.substring(0, 21) + " :star:");
+    }
+    })
+	  
+	
+	.then(message.awaitReactions(filter, {max : 3, time: 360000, errors: ['time']  })
+    .then(collected => {
+        const reaction = collected.last();
+	    
+    if (reaction.emoji.name ==='🥇') {
+        var str = message.content;
+        message.edit(str.substring(0, 28));
+    }
+    })
+	
+     .then(message.awaitReactions(filter, {max : 3, time: 360000, errors: ['time']  })
     .then(collected => {
         const reaction = collected.last();
 
@@ -91,6 +124,26 @@ if(message.content.endsWith(":star:")){
     }
     })
 	  
+	.then(message.awaitReactions(filter, {max : 4, time: 360000, errors: ['time']  })
+    .then(collected => {
+        const reaction = collected.last();
+	    
+    if (reaction.emoji.name ==='🥇') {
+        var str = message.content;
+        message.edit(str.substring(0, 28));
+    }
+    })
+	
+     .then(message.awaitReactions(filter, {max : 4, time: 360000, errors: ['time']  })
+    .then(collected => {
+        const reaction = collected.last();
+
+    if (reaction.emoji.name ==='🥈') {
+        var str = message.content;
+        message.edit(str.substring(0, 21));
+    }
+    })  
+	  
     .then(message.awaitReactions(filter, {max : 4, time: 360000, errors: ['time']  })
     .then(collected => {
 
@@ -109,7 +162,38 @@ if(message.content.endsWith(":star:")){
 
     if (reaction.emoji.name ==='❌') {
         var str = message.content;
-        message.edit(str.substring(0, 14) + " :star:");
+        message.edit(str.substring(0, 21) + " :star:");
+    }
+    })
+	  .then(message.awaitReactions(filter, {max : 5, time: 360000, errors: ['time']  })
+    .then(collected => {
+        const reaction = collected.last();
+	    
+    if (reaction.emoji.name ==='🥇') {
+        var str = message.content;
+        message.edit(str.substring(0, 28));
+    }
+    })
+	
+     .then(message.awaitReactions(filter, {max : 5, time: 360000, errors: ['time']  })
+    .then(collected => {
+        const reaction = collected.last();
+
+    if (reaction.emoji.name ==='🥈') {
+        var str = message.content;
+        message.edit(str.substring(0, 21));
+    }
+    })  
+	  
+    .then(message.awaitReactions(filter, {max : 5, time: 360000, errors: ['time']  })
+    .then(collected => {
+
+        const reaction = collected.last();
+
+
+    if (reaction.emoji.name === '🥉') {
+        message.edit("Adversaire vide");
+
     }
     })
 	  
@@ -119,9 +203,101 @@ if(message.content.endsWith(":star:")){
 
     if (reaction.emoji.name ==='❌') {
         var str = message.content;
-        message.edit(str.substring(0, 14) + " :star:");
+        message.edit(str.substring(0, 21) + " :star:");
     }
-    })))))))))
+    })
+	  .then(message.awaitReactions(filter, {max : 6, time: 360000, errors: ['time']  })
+    .then(collected => {
+        const reaction = collected.last();
+	    
+    if (reaction.emoji.name ==='🥇') {
+        var str = message.content;
+        message.edit(str.substring(0, 28));
+    }
+    })
+	
+     .then(message.awaitReactions(filter, {max : 6, time: 360000, errors: ['time']  })
+    .then(collected => {
+        const reaction = collected.last();
+
+    if (reaction.emoji.name ==='🥈') {
+        var str = message.content;
+        message.edit(str.substring(0, 21));
+    }
+    })  
+	  
+    .then(message.awaitReactions(filter, {max : 6, time: 360000, errors: ['time']  })
+    .then(collected => {
+
+        const reaction = collected.last();
+
+
+    if (reaction.emoji.name === '🥉') {
+        message.edit("Adversaire vide");
+
+    }
+    })
+	  
+    .then(message.awaitReactions(filter, {max : 6, time: 360000, errors: ['time']  })
+    .then(collected => {
+        const reaction = collected.last();
+
+    if (reaction.emoji.name ==='❌') {
+        var str = message.content;
+        message.edit(str.substring(0, 21) + " :star:");
+    }
+    })
+	  .then(message.awaitReactions(filter, {max : 7, time: 360000, errors: ['time']  })
+    .then(collected => {
+        const reaction = collected.last();
+	    
+    if (reaction.emoji.name ==='🥇') {
+        var str = message.content;
+        message.edit(str.substring(0, 28));
+    }
+    })
+	
+     .then(message.awaitReactions(filter, {max : 7, time: 360000, errors: ['time']  })
+    .then(collected => {
+        const reaction = collected.last();
+
+    if (reaction.emoji.name ==='🥈') {
+        var str = message.content;
+        message.edit(str.substring(0, 21));
+    }
+    })  
+	  
+    .then(message.awaitReactions(filter, {max : 7, time: 360000, errors: ['time']  })
+    .then(collected => {
+
+        const reaction = collected.last();
+
+
+    if (reaction.emoji.name === '🥉') {
+        message.edit("Adversaire vide");
+
+    }
+    })
+	  
+    .then(message.awaitReactions(filter, {max : 7, time: 360000, errors: ['time']  })
+    .then(collected => {
+        const reaction = collected.last();
+
+    if (reaction.emoji.name ==='❌') {
+        var str = message.content;
+        message.edit(str.substring(0, 21) + " :star:");
+    }
+    })
+	  
+    .then(message.awaitReactions(filter, {max : 8, time: 360000, errors: ['time']  })
+    .then(collected => {
+        const reaction = collected.last();
+
+    if (reaction.emoji.name ==='❌') {
+        var str = message.content;
+        message.edit(str.substring(0, 21) + " :star:");
+    }
+    }))))))))))))))))))))))))))))))
 	
 }
 	 	
