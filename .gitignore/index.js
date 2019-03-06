@@ -297,7 +297,7 @@ if(message.content.endsWith(":star:")){
         var str = message.content;
         message.edit(str + ":star:");
     }
-    })))))))))))))))))))))))))))
+    }))))))))))))))))))))))))))
 	
 }
 	 	
