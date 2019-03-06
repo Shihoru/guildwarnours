@@ -77,7 +77,7 @@ if(message.content.endsWith(":star:")){
 
     if (reaction.emoji.name ==='❌') {
         var str = message.content;
-        message.edit(str.substring(0, 21) + " :star:");
+        message.edit(str + ":star:");
     }
     })
 	  
@@ -120,7 +120,7 @@ if(message.content.endsWith(":star:")){
 
     if (reaction.emoji.name ==='❌') {
         var str = message.content;
-        message.edit(str.substring(0, 21) + " :star:");
+        message.edit(str + ":star:");
     }
     })
 	  
@@ -162,7 +162,7 @@ if(message.content.endsWith(":star:")){
 
     if (reaction.emoji.name ==='❌') {
         var str = message.content;
-        message.edit(str.substring(0, 21) + " :star:");
+        message.edit(str + ":star:");
     }
     })
 	  .then(message.awaitReactions(filter, {max : 5, time: 360000, errors: ['time']  })
@@ -203,7 +203,7 @@ if(message.content.endsWith(":star:")){
 
     if (reaction.emoji.name ==='❌') {
         var str = message.content;
-        message.edit(str.substring(0, 21) + " :star:");
+        message.edit(str + ":star:");
     }
     })
 	  .then(message.awaitReactions(filter, {max : 6, time: 360000, errors: ['time']  })
@@ -244,7 +244,7 @@ if(message.content.endsWith(":star:")){
 
     if (reaction.emoji.name ==='❌') {
         var str = message.content;
-        message.edit(str.substring(0, 21) + " :star:");
+        message.edit(str + ":star:");
     }
     })
 	  .then(message.awaitReactions(filter, {max : 7, time: 360000, errors: ['time']  })
@@ -285,7 +285,7 @@ if(message.content.endsWith(":star:")){
 
     if (reaction.emoji.name ==='❌') {
         var str = message.content;
-        message.edit(str.substring(0, 21) + " :star:");
+        message.edit(str + ":star:");
     }
     })
 	  
@@ -295,7 +295,7 @@ if(message.content.endsWith(":star:")){
 
     if (reaction.emoji.name ==='❌') {
         var str = message.content;
-        message.edit(str.substring(0, 21) + " :star:");
+        message.edit(str + ":star:");
     }
     })))))))))))))))))))))))))))
 	
