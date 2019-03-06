@@ -98,7 +98,7 @@ bot.on('message', function (message) {
     
         if (reaction.emoji.name ==='❌') {
             var str = message.content;
-            message.edit(str.substring(0, 21));
+            message.edit(str.substring(0, 28));
         }
         })
           
@@ -131,7 +131,7 @@ bot.on('message', function (message) {
     
         if (reaction.emoji.name ==='❌') {
             var str = message.content;
-            message.edit(str.substring(0, 14));
+            message.edit(str.substring(0, 21));
         }
         })
         
@@ -154,7 +154,7 @@ bot.on('message', function (message) {
     
         if (reaction.emoji.name ==='❌') {
             var str = message.content;
-            message.edit(str.substring(0, 14));
+            message.edit(str.substring(0, 21));
         }
         }))))))))))))
         
