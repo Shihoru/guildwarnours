@@ -204,7 +204,7 @@ bot.on('message', function (message) {
         }) 
 
 //------------------------------------------ROAD1-------------------------------------------------------------------------
-        message.awaitReactions(filter, {max : 3, time: 360000, errors: ['time']  })
+        .then(message.awaitReactions(filter, {max : 3, time: 360000, errors: ['time']  })
         .then(collected => {
             const reaction = collected.last();
             
@@ -378,7 +378,7 @@ bot.on('message', function (message) {
         })    
 
         //----------------------------------------ROAD2----------------------------------------------------------------
-        message.awaitReactions(filter, {max : 5, time: 360000, errors: ['time']  })
+        .then(message.awaitReactions(filter, {max : 5, time: 360000, errors: ['time']  })
         .then(collected => {
             const reaction = collected.last();
             
@@ -548,6 +548,6 @@ bot.on('message', function (message) {
             message.edit("Adversaire vide");
     
         }
-        })))))))))))))))))))))))))))))))))))))))))))))) 
+        }))))))))))))))))))))))))))))))))))))))))))))))))
     }
     });
