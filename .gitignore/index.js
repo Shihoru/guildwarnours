@@ -21,19 +21,19 @@ bot.on('message', function (message) {
         console.log("Le bot dit bonjour");
     }
     
-     if(message.content.endsWith(":star:")){
+    if(message.content.endsWith(":star:")){
     
         message.react('🥇').then(() => message.react('🥈')).then(() => message.react('🥉')).then(() => message.react('❌'));
     	var road = 0;
         const filter = (reaction, user) => {
         return ['🥇', '🥈','🥉','❌'].includes(reaction.emoji.name) && user.id !== message.author.id;
         };
-    
+    while(road == 0){
         message.awaitReactions(filter, {max : 1, time: 360000, errors: ['time']  })
         .then(collected => {
             const reaction = collected.last();
             
-        if (reaction.emoji.name ==='🥇' && road == 0) {
+        if (reaction.emoji.name ==='🥇') {
             var str = message.content;
             message.edit(str.substring(0, 28));
         }
@@ -43,7 +43,7 @@ bot.on('message', function (message) {
         .then(collected => {
             const reaction = collected.last();
     
-        if (reaction.emoji.name ==='🥈' && road == 0) {
+        if (reaction.emoji.name ==='🥈') {
             var str = message.content;
             message.edit(str.substring(0, 21));
         }
@@ -54,7 +54,7 @@ bot.on('message', function (message) {
         .then(collected => {
             const reaction = collected.last();
     
-        if (reaction.emoji.name ==='❌' && road == 0) {
+        if (reaction.emoji.name ==='❌') {
             var str = message.content;
 		    road = 1;
             message.edit(str.substring(0, 34));
@@ -68,7 +68,7 @@ bot.on('message', function (message) {
             const reaction = collected.last();
     
     
-        if (reaction.emoji.name === '🥉' && road == 0) {
+        if (reaction.emoji.name === '🥉') {
             message.edit("Adversaire vide");
     
         }
@@ -78,7 +78,7 @@ bot.on('message', function (message) {
         .then(collected => {
             const reaction = collected.last();
     
-        if (reaction.emoji.name ==='❌' && road == 0) {
+        if (reaction.emoji.name ==='❌') {
             var str = message.content;
             message.edit(str.substring(0, 28));
         }
@@ -88,7 +88,7 @@ bot.on('message', function (message) {
         .then(collected => {
             const reaction = collected.last();
     
-        if (reaction.emoji.name ==='🥈' && road == 0) {
+        if (reaction.emoji.name ==='🥈') {
             var str = message.content;
             message.edit(str.substring(0, 21));
         }
@@ -98,7 +98,7 @@ bot.on('message', function (message) {
         .then(collected => {
             const reaction = collected.last();
     
-        if (reaction.emoji.name ==='❌' && road == 0) {
+        if (reaction.emoji.name ==='❌') {
             var str = message.content;
             message.edit(str.substring(0, 21));
         }
@@ -110,7 +110,7 @@ bot.on('message', function (message) {
             const reaction = collected.last();
     
     
-        if (reaction.emoji.name === '🥉' && road == 0) {
+        if (reaction.emoji.name === '🥉') {
             message.edit("Adversaire vide");
     
         }
@@ -120,7 +120,7 @@ bot.on('message', function (message) {
         .then(collected => {
             const reaction = collected.last();
     
-        if (reaction.emoji.name ==='❌' && road == 0) {
+        if (reaction.emoji.name ==='❌') {
             var str = message.content;
             message.edit(str.substring(0, 28));
         }
@@ -130,7 +130,7 @@ bot.on('message', function (message) {
         .then(collected => {
             const reaction = collected.last();
     
-        if (reaction.emoji.name ==='🥈' && road == 0) {
+        if (reaction.emoji.name ==='🥈') {
             var str = message.content;
             message.edit(str.substring(0, 21));
         }
@@ -140,7 +140,7 @@ bot.on('message', function (message) {
         .then(collected => {
             const reaction = collected.last();
     
-        if (reaction.emoji.name ==='❌' && road == 0) {
+        if (reaction.emoji.name ==='❌') {
             var str = message.content;
             message.edit(str.substring(0, 21));
         }
@@ -152,7 +152,7 @@ bot.on('message', function (message) {
             const reaction = collected.last();
     
     
-        if (reaction.emoji.name === '🥉' && road == 0) {
+        if (reaction.emoji.name === '🥉') {
             message.edit("Adversaire vide");
     
         }
@@ -162,7 +162,7 @@ bot.on('message', function (message) {
         .then(collected => {
             const reaction = collected.last();
     
-        if (reaction.emoji.name ==='❌' && road == 0) {
+        if (reaction.emoji.name ==='❌') {
             var str = message.content;
             message.edit(str.substring(0, 21));
         }
@@ -174,7 +174,7 @@ bot.on('message', function (message) {
             const reaction = collected.last();
     
     
-        if (reaction.emoji.name === '🥉' && road == 0) {
+        if (reaction.emoji.name === '🥉') {
             message.edit("Adversaire vide");
     
         }
@@ -184,7 +184,7 @@ bot.on('message', function (message) {
         .then(collected => {
             const reaction = collected.last();
     
-        if (reaction.emoji.name ==='❌' && road == 0) {
+        if (reaction.emoji.name ==='❌') {
             var str = message.content;
             message.edit(str.substring(0, 21));
         }
@@ -196,18 +196,20 @@ bot.on('message', function (message) {
             const reaction = collected.last();
     
     
-        if (reaction.emoji.name === '🥉' && road == 0) {
+        if (reaction.emoji.name === '🥉') {
             message.edit("Adversaire vide");
     
         }
-        })  
+        }))))))))))))))))  
+    }
 
 //------------------------------------------ROAD1-------------------------------------------------------------------------
-        .then(message.awaitReactions(filter, {max : 3, time: 360000, errors: ['time']  })
+    while(road == 1){
+        message.awaitReactions(filter, {max : 3, time: 360000, errors: ['time']  })
         .then(collected => {
             const reaction = collected.last();
             
-        if (reaction.emoji.name ==='🥇' && road == 1) {
+        if (reaction.emoji.name ==='🥇') {
             var str = message.content;
             message.edit(str.substring(0, 28));
         }
@@ -217,7 +219,7 @@ bot.on('message', function (message) {
         .then(collected => {
             const reaction = collected.last();
     
-        if (reaction.emoji.name ==='🥈' && road == 1) {
+        if (reaction.emoji.name ==='🥈') {
             var str = message.content;
             message.edit(str.substring(0, 21));
         }
@@ -228,7 +230,7 @@ bot.on('message', function (message) {
         .then(collected => {
             const reaction = collected.last();
     
-        if (reaction.emoji.name ==='❌' && road == 1) {
+        if (reaction.emoji.name ==='❌') {
             var str = message.content;
 		    road = 2;
             message.edit(str.substring(0, 34));
@@ -242,7 +244,7 @@ bot.on('message', function (message) {
             const reaction = collected.last();
     
     
-        if (reaction.emoji.name === '🥉' && road == 1) {
+        if (reaction.emoji.name === '🥉') {
             message.edit("Adversaire vide");
     
         }
@@ -252,7 +254,7 @@ bot.on('message', function (message) {
         .then(collected => {
             const reaction = collected.last();
     
-        if (reaction.emoji.name ==='❌' && road == 1) {
+        if (reaction.emoji.name ==='❌') {
             var str = message.content;
             message.edit(str.substring(0, 28));
         }
@@ -262,7 +264,7 @@ bot.on('message', function (message) {
         .then(collected => {
             const reaction = collected.last();
     
-        if (reaction.emoji.name ==='🥈' && road == 1) {
+        if (reaction.emoji.name ==='🥈') {
             var str = message.content;
             message.edit(str.substring(0, 21));
         }
@@ -272,7 +274,7 @@ bot.on('message', function (message) {
         .then(collected => {
             const reaction = collected.last();
     
-        if (reaction.emoji.name ==='❌' && road == 1) {
+        if (reaction.emoji.name ==='❌') {
             var str = message.content;
             message.edit(str.substring(0, 21));
         }
@@ -284,7 +286,7 @@ bot.on('message', function (message) {
             const reaction = collected.last();
     
     
-        if (reaction.emoji.name === '🥉' && road == 1) {
+        if (reaction.emoji.name === '🥉') {
             message.edit("Adversaire vide");
     
         }
@@ -294,7 +296,7 @@ bot.on('message', function (message) {
         .then(collected => {
             const reaction = collected.last();
     
-        if (reaction.emoji.name ==='❌' && road == 1) {
+        if (reaction.emoji.name ==='❌') {
             var str = message.content;
             message.edit(str.substring(0, 28));
         }
@@ -304,7 +306,7 @@ bot.on('message', function (message) {
         .then(collected => {
             const reaction = collected.last();
     
-        if (reaction.emoji.name ==='🥈' && road == 1) {
+        if (reaction.emoji.name ==='🥈') {
             var str = message.content;
             message.edit(str.substring(0, 21));
         }
@@ -314,7 +316,7 @@ bot.on('message', function (message) {
         .then(collected => {
             const reaction = collected.last();
     
-        if (reaction.emoji.name ==='❌' && road == 1) {
+        if (reaction.emoji.name ==='❌') {
             var str = message.content;
             message.edit(str.substring(0, 21));
         }
@@ -326,7 +328,7 @@ bot.on('message', function (message) {
             const reaction = collected.last();
     
     
-        if (reaction.emoji.name === '🥉' && road == 1) {
+        if (reaction.emoji.name === '🥉') {
             message.edit("Adversaire vide");
     
         }
@@ -336,7 +338,7 @@ bot.on('message', function (message) {
         .then(collected => {
             const reaction = collected.last();
     
-        if (reaction.emoji.name ==='❌' && road == 1) {
+        if (reaction.emoji.name ==='❌') {
             var str = message.content;
             message.edit(str.substring(0, 21));
         }
@@ -348,7 +350,7 @@ bot.on('message', function (message) {
             const reaction = collected.last();
     
     
-        if (reaction.emoji.name === '🥉' && road == 1) {
+        if (reaction.emoji.name === '🥉') {
             message.edit("Adversaire vide");
     
         }
@@ -358,7 +360,7 @@ bot.on('message', function (message) {
         .then(collected => {
             const reaction = collected.last();
     
-        if (reaction.emoji.name ==='❌' && road == 1) {
+        if (reaction.emoji.name ==='❌') {
             var str = message.content;
             message.edit(str.substring(0, 21));
         }
@@ -370,18 +372,20 @@ bot.on('message', function (message) {
             const reaction = collected.last();
     
     
-        if (reaction.emoji.name === '🥉' && road == 1) {
+        if (reaction.emoji.name === '🥉') {
             message.edit("Adversaire vide");
     
         }
-        })     
+        })))))))))))))))))    
+    } 
 
         //----------------------------------------ROAD2----------------------------------------------------------------
-        .then(message.awaitReactions(filter, {max : 5, time: 360000, errors: ['time']  })
+    while(road == 2){
+        message.awaitReactions(filter, {max : 5, time: 360000, errors: ['time']  })
         .then(collected => {
             const reaction = collected.last();
             
-        if (reaction.emoji.name ==='🥇' && road == 2) {
+        if (reaction.emoji.name ==='🥇') {
             var str = message.content;
             message.edit(str.substring(0, 28));
         }
@@ -391,7 +395,7 @@ bot.on('message', function (message) {
         .then(collected => {
             const reaction = collected.last();
     
-        if (reaction.emoji.name ==='🥈' && road == 2) {
+        if (reaction.emoji.name ==='🥈') {
             var str = message.content;
             message.edit(str.substring(0, 21));
         }
@@ -402,7 +406,7 @@ bot.on('message', function (message) {
         .then(collected => {
             const reaction = collected.last();
     
-        if (reaction.emoji.name ==='❌' && road == 2) {
+        if (reaction.emoji.name ==='❌') {
             var str = message.content;
             message.edit(str.substring(0, 34));
         }
@@ -415,7 +419,7 @@ bot.on('message', function (message) {
             const reaction = collected.last();
     
     
-        if (reaction.emoji.name === '🥉' && road == 2) {
+        if (reaction.emoji.name === '🥉') {
             message.edit("Adversaire vide");
     
         }
@@ -425,7 +429,7 @@ bot.on('message', function (message) {
         .then(collected => {
             const reaction = collected.last();
     
-        if (reaction.emoji.name ==='❌' && road == 2) {
+        if (reaction.emoji.name ==='❌') {
             var str = message.content;
             message.edit(str.substring(0, 28));
         }
@@ -435,7 +439,7 @@ bot.on('message', function (message) {
         .then(collected => {
             const reaction = collected.last();
     
-        if (reaction.emoji.name ==='🥈' && road == 2) {
+        if (reaction.emoji.name ==='🥈') {
             var str = message.content;
             message.edit(str.substring(0, 21));
         }
@@ -445,7 +449,7 @@ bot.on('message', function (message) {
         .then(collected => {
             const reaction = collected.last();
     
-        if (reaction.emoji.name ==='❌' && road == 2) {
+        if (reaction.emoji.name ==='❌') {
             var str = message.content;
             message.edit(str.substring(0, 21));
         }
@@ -457,7 +461,7 @@ bot.on('message', function (message) {
             const reaction = collected.last();
     
     
-        if (reaction.emoji.name === '🥉' && road == 2) {
+        if (reaction.emoji.name === '🥉') {
             message.edit("Adversaire vide");
     
         }
@@ -467,7 +471,7 @@ bot.on('message', function (message) {
         .then(collected => {
             const reaction = collected.last();
     
-        if (reaction.emoji.name ==='❌' && road == 2) {
+        if (reaction.emoji.name ==='❌') {
             var str = message.content;
             message.edit(str.substring(0, 28));
         }
@@ -477,7 +481,7 @@ bot.on('message', function (message) {
         .then(collected => {
             const reaction = collected.last();
     
-        if (reaction.emoji.name ==='🥈' && road == 2) {
+        if (reaction.emoji.name ==='🥈') {
             var str = message.content;
             message.edit(str.substring(0, 21));
         }
@@ -487,7 +491,7 @@ bot.on('message', function (message) {
         .then(collected => {
             const reaction = collected.last();
     
-        if (reaction.emoji.name ==='❌' && road == 2) {
+        if (reaction.emoji.name ==='❌') {
             var str = message.content;
             message.edit(str.substring(0, 21));
         }
@@ -499,7 +503,7 @@ bot.on('message', function (message) {
             const reaction = collected.last();
     
     
-        if (reaction.emoji.name === '🥉' && road == 2) {
+        if (reaction.emoji.name === '🥉') {
             message.edit("Adversaire vide");
     
         }
@@ -509,7 +513,7 @@ bot.on('message', function (message) {
         .then(collected => {
             const reaction = collected.last();
     
-        if (reaction.emoji.name ==='❌' && road == 2) {
+        if (reaction.emoji.name ==='❌') {
             var str = message.content;
             message.edit(str.substring(0, 21));
         }
@@ -521,7 +525,7 @@ bot.on('message', function (message) {
             const reaction = collected.last();
     
     
-        if (reaction.emoji.name === '🥉' && road == 2) {
+        if (reaction.emoji.name === '🥉') {
             message.edit("Adversaire vide");
     
         }
@@ -531,7 +535,7 @@ bot.on('message', function (message) {
         .then(collected => {
             const reaction = collected.last();
     
-        if (reaction.emoji.name ==='❌' && road == 2) {
+        if (reaction.emoji.name ==='❌') {
             var str = message.content;
             message.edit(str.substring(0, 21));
         }
@@ -543,11 +547,11 @@ bot.on('message', function (message) {
             const reaction = collected.last();
     
     
-        if (reaction.emoji.name === '🥉' && road == 2) {
+        if (reaction.emoji.name === '🥉') {
             message.edit("Adversaire vide");
     
         }
-        }))))))))))))))))))))))))))))))))))))))))))))))))    
+        }))))))))))))))))  
     }
-             
+ }
     });
