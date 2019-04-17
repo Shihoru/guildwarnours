@@ -28,5 +28,5 @@ bot.on('message', function (message) {
         const filter = (reaction, user) => {
         return ['💠'].includes(reaction.emoji.name) && user.id !== message.author.id;
         };
-        })
+        }
     });
