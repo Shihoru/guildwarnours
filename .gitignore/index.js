@@ -21,4 +21,12 @@ bot.on('message', function (message) {
         console.log("Le bot dit bonjour");
     }
     
+	if(message.content.endsWith(":star:")){
+    
+        message.react('💠');
+
+        const filter = (reaction, user) => {
+        return ['💠'].includes(reaction.emoji.name) && user.id !== message.author.id;
+        };
+        })
     });
