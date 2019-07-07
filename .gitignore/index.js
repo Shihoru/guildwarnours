@@ -1,5 +1,6 @@
 const Discord = require('discord.js');
 const Tableau = require('./Tableau')
+const Clear = require('./Clear')
 const bot = new Discord.Client();
 
 
