@@ -20,6 +20,16 @@ bot.on('message', function (message) {
         message.reply("Hello :raised_hands:");
         console.log("Le bot dit bonjour");
     }
+	
+	if(message.content == "$clear"){
+		if(message.member.hasPermission("MANAGE_MESSAGES")){
+			message.channel.fetMessages()
+			.then(function(list){
+				message.channel.bulkDelete(list);
+			}, function(err){message.channel.send("Erreur")}
+		}
+	}
+		
     
 	if(message.content.endsWith(":star:")){
     
