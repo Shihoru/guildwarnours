@@ -16,19 +16,16 @@ bot.on('message', function (message) {
         return Tableau.action(message)
     }
     
+	
+    if (Clear.match(message)){
+        return Clear.action(message)
+    }
+	
     if(message.content == "Salut"){
         message.reply("Hello :raised_hands:");
         console.log("Le bot dit bonjour");
     }
 	
-	if(message.content == "$clear"){
-		if(message.member.hasPermission("MANAGE_MESSAGES")){
-			message.channel.fetchMessages()
-			.then(function(list){
-				message.channel.bulkDelete(list);
-			}, function(err){message.channel.send("Erreur")})
-		}
-	}
 		
     
 	if(message.content.endsWith(":star:")){
