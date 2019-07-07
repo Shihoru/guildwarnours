@@ -1,8 +1,26 @@
-if(message.content == "$clear"){
-		if(message.member.hasPermission("MANAGE_MESSAGES")){
-			message.channel.fetchMessages()
-			.then(function(list){
-				message.channel.bulkDelete(list);
-			}, function(err){message.channel.send("Erreur")})
-		}
-	}
+module.exports = class Clear {
+
+    static match (message){
+        return message.content.startsWith('$clear')
+    }
+
+    static action (message) {
+        let args = message.content.split(' ')
+        args.shift()
+	
+	if(!message.member.hasPermission("MANAGE_MESSAGES"))
+	   return message.reply("Vous n'avez pas la permission");
+	if(!args[0])
+	   return message.reply(
+	   "Syntaxe: $clear <entrer le nombre de message à supprimer"
+	   );
+	   
+	   message.channel.bulkDelete(args[0]).then(() => {
+	     message.channel
+	       .send(`J'ai supprimé ***${args[0]} messages*** pour vous !`)
+	       .then(msg => msg.delete(5000));
+	    });
+	    
+        
+     }
+}
