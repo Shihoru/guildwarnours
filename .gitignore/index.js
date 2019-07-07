@@ -23,7 +23,7 @@ bot.on('message', function (message) {
 	
 	if(message.content == "$clear"){
 		if(message.member.hasPermission("MANAGE_MESSAGES")){
-			message.channel.fetMessages()
+			message.channel.fetchMessages()
 			.then(function(list){
 				message.channel.bulkDelete(list);
 			}, function(err){message.channel.send("Erreur")})
