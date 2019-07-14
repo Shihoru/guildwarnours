@@ -17,6 +17,9 @@ bot.on('message', function (message) {
         return Tableau.action(message)
     }
     
+    if (Frenzy.match(message)){
+        return Frenzy.action(message)
+    }
 	
     if (Clear.match(message)){
         return Clear.action(message)
