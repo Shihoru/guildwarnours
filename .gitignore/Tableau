@@ -14,4 +14,23 @@ module.exports = class Tableau {
         }
         
      }
+     
+     static match (message2){
+        return message.content.startsWith('!gvgf')
+    }
+
+    static action (message2) {
+        let args = message.content.split(' ')
+        args.shift()
+        message.channel.send(:shield: Armuerie 0 à 30);
+        message.channel.send(:shield: Armuerie 30 à 60);
+        message.channel.send(:shield: Armuerie 60 à 90);
+        message.channel.send(:shield: Armuerie 90 à 120);
+        
+        for (var i = 1; i<=args; i++) {
+            message.channel.send("___***"+i+"***___ :star: :star: :star:"); 
+            
+        }
+        
+     }
 }
