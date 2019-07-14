@@ -42,7 +42,7 @@ bot.on('message', function (message) {
         };
         }
 	
-	if(message.content.endsWith(":shield:")){
+	if(message.content.startWith(":shield:")){
     
         message.react('💥');
 
