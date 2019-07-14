@@ -37,4 +37,13 @@ bot.on('message', function (message) {
         return ['💠'].includes(reaction.emoji.name) && user.id !== message.author.id;
         };
         }
+	
+	if(message.content.endsWith(":shield:")){
+    
+        message.react('💠');
+
+        const filter = (reaction, user) => {
+        return ['💠'].includes(reaction.emoji.name) && user.id !== message.author.id;
+        };
+        }
     });
