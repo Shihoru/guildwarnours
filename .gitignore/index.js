@@ -30,7 +30,10 @@ bot.on('message', function (message) {
         message.reply("Hello :raised_hands:");
         console.log("Le bot dit bonjour");
     }
-	
+     if(message.content == "MasterPine"){
+        message.reply("@everyone");
+        console.log("Le bot est pret pour la pine");
+    }
 		
     
 	if(message.content.endsWith(":star:")){
