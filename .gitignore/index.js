@@ -1,7 +1,6 @@
 const Discord = require('discord.js');
 const Tableau = require('./Tableau')
 const Clear = require('./Clear')
-const Frenzy = require('./Frenzy')
 const bot = new Discord.Client();
 
 
@@ -17,10 +16,6 @@ bot.on('message', function (message) {
     if (Tableau.match(message)){
         return Tableau.action(message)
     }
-    
-    if (Frenzy.match(message)){
-        return Frenzy.action(message)
-    }
 	
     if (Clear.match(message)){
         return Clear.action(message)
@@ -34,7 +29,11 @@ bot.on('message', function (message) {
         message.reply("@everyone");
         console.log("Le bot est pret pour la pine");
     }
-		
+     if(message.content == "Paladin"){
+        message.reply("@everyone go rush palouf !");
+        console.log("Ready pour un paladin");
+    }
+	
     
 	if(message.content.endsWith(":star:")){
     
