@@ -29,7 +29,7 @@ bot.on('message', function (message) {
         message.reply("@everyone");
         console.log("Le bot est pret pour la pine");
     }
-     if(message.content == "Paladin"){
+     if(message.content == "Paladins"){
         message.reply("@everyone go rush palouf !");
         console.log("Ready pour un paladin");
     }
