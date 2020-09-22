@@ -33,6 +33,10 @@ bot.on('message', function (message) {
         message.reply("@everyone go rush palouf !");
         console.log("Ready pour un paladin");
     }
+     if(message.content == "AmongUs"){
+        message.reply("@everyone You looking sus ! https://media1.tenor.com/images/c5b612df9ef285c67d38c17ddd9635b9/tenor.gif?itemid=17674950");
+        console.log("Ready pour un amongus");
+    }
 	
     
 	if(message.content.endsWith(":star:")){
