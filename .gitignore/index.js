@@ -1,5 +1,4 @@
 const Discord = require('discord.js');
-const Tableau = require('./Tableau')
 const Clear = require('./Clear')
 const bot = new Discord.Client();
 
@@ -12,10 +11,6 @@ bot.on('ready', function() {
 
 
 bot.on('message', function (message) {
-
-    if (Tableau.match(message)){
-        return Tableau.action(message)
-    }
 	
     if (Clear.match(message)){
         return Clear.action(message)
@@ -42,22 +37,4 @@ bot.on('message', function (message) {
         console.log("Ready pour un overwatchs");
     }
 	
-    
-	if(message.content.endsWith(":star:")){
-    
-        message.react('💠');
-
-        const filter = (reaction, user) => {
-        return ['💠'].includes(reaction.emoji.name) && user.id !== message.author.id;
-        };
-        }
-	
-	if(message.content.startsWith(":shield:")){
-    
-        message.react('💥');
-
-        const filter = (reaction, user) => {
-        return ['💥'].includes(reaction.emoji.name) && user.id !== message.author.id;
-        };
-        }
     });
