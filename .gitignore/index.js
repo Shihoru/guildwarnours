@@ -7,7 +7,7 @@ const bot = new Discord.Client();
 bot.login(process.env.TOKEN);
 
 bot.on('ready', function() {
-	bot.user.setActivity('Ready to fight').catch(console.error)
+	bot.user.setActivity('Ready to play').catch(console.error)
 });
 
 
