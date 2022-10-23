@@ -38,8 +38,8 @@ bot.on('message', function (message) {
         console.log("Ready pour un amongus");
     }
 	if(message.content == "OW"){
-        message.reply("@everyone Appel Overwatch);
-        console.log("Ready pour un amongus");
+        message.reply("@everyone Appel Overwatch");
+        console.log("Ready pour un overwatchs");
     }
 	
     
